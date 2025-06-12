@@ -1,5 +1,186 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-color: var(--background-color);
+}
+
+main {
+  padding-inline: 10px;
+  padding-block: 40px;
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+  font-size: var(--main-text-size);
+  line-height: var(--main-text-line-height);
+  font-weight: bold;
+  color: var(--secondary-text-color);
+}
+
+.link-decor {
+  text-shadow: 2px 2px var(--accent-color);
+  text-decoration: none;
+}
+
+.link-decor:hover {
+  border-block-end:1px solid var(--main-text-color);
+}
+
+.link-decor:focus {
+  border:1px solid var(--main-text-color);
+}
+
+.heading-decor {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: .83em;
+  font-weight: bold;
+  color: var(--heading-color);
+  text-shadow: 4px 4px var(--accent-color);
+}
+
+.header {
+  padding-inline: 10px;
+  padding-block-start: 75px;
+  padding-block-end: 66px;
+  background-image: var(--background-image);
+  background-position: center center;
+  background-attachment: fixed;
+  display: grid;
+  grid-template-columns: 1fr;
+  position: relative;
+}
+
+.header::before,
+.footer::before {
+  content: '';
+  display: block;
+  inline-size: 25px;
+  block-size: 25px;
+  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.header::after,
+.footer::after {
+  content: '';
+  display: block;
+  inline-size: 25px;
+  block-size: 25px;
+  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--accent-color);
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+}
+
+.header__rec {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--main-text-size);
+  line-height: var(--main-text-line-height);;
+  color: var(--accent-color);
+  position: absolute;
+  top: 10px;
+  right: 19px;
+}
+
+.header__rec:after {
+  content: '';
+  display: block;
+  inline-size: 9px;
+  block-size: 9px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
+}
+
+.header__theme-menu {
+  margin-block-end: 55px;
+  justify-self: end;
+}
+
+.header__theme-menu-item:not(:last-of-type) {
+  margin-block-end: 10px;
+}
+
+.header__theme-menu-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 70px;
+  block-size: 26px;
+  border: 1px solid transparent;
+  font-size: var(--main-text-size);
+  line-height: var(--main-text-line-height);
+  color: var(--accent-color);
+  text-transform: lowercase;
+  cursor: pointer;
+}
+
+.header__theme-menu-button:hover {
+  border-color: var(--transparent-accent-color);
+}
+
+.header__theme-menu-button.header__theme-menu-button_active {
+  border-color: var(--accent-color);
+}
+
+.header__theme-menu-button:focus-within {
+  border-color: transparent;
+  border-block-end-color: var(--accent-color);
+}
+
+.header__title {
+  margin-block-end: 65px;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+}
+
+.section-galery {
+  row-gap: 10px;
+}
+
+.section:not(:last-child) {
+  margin-block-end: 50px;
+}
+
+.section__title {
+  font-size: var(--main-text-size);
+  line-height: var(--main-text-line-height);
+  color: var(--accent-color);
+}
+
+.card-title {
+  margin-block-end: 10px;
+}
+
+.card-title--light {
+  font-weight: normal;
+}
+
+.card-text {
+  font-size: var(--main-text-size);
+  line-height: var(--main-text-line-height);
+  color: var(--main-text-color);
+}
+
+.footer {
+  block-size: 686px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
 }
