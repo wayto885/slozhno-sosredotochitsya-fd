@@ -26,7 +26,7 @@ main {
   border-block-end:1px solid var(--main-text-color);
 }
 
-.link-decor:focus {
+.link-decor:focus-visible {
   border:1px solid var(--main-text-color);
 }
 
@@ -57,8 +57,8 @@ main {
   display: block;
   inline-size: 25px;
   block-size: 25px;
-  border-block-start: 1px solid var(--accent-color);
-  border-inline-end: 1px solid var(--accent-color);
+  border-block-start: 1px solid var(--corner-decor-color);
+  border-inline-end: 1px solid var(--corner-decor-color);
   position: absolute;
   top: 10px;
   right: 10px;
@@ -70,8 +70,8 @@ main {
   display: block;
   inline-size: 25px;
   block-size: 25px;
-  border-block-end: 1px solid var(--accent-color);
-  border-inline-start: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--corner-decor-color);
+  border-inline-start: 1px solid var(--corner-decor-color);
   position: absolute;
   left: 10px;
   bottom: 10px;
@@ -117,7 +117,7 @@ main {
   border: 1px solid transparent;
   font-size: var(--main-text-size);
   line-height: var(--main-text-line-height);
-  color: var(--accent-color);
+  color: var(--theme-menu-color);
   text-transform: lowercase;
   cursor: pointer;
 }
@@ -127,12 +127,14 @@ main {
 }
 
 .header__theme-menu-button.header__theme-menu-button_active {
-  border-color: var(--accent-color);
+  border-color: var(--theme-menu-color);
+  pointer-events: none;
+  cursor: default;
 }
 
-.header__theme-menu-button:focus-within {
+.header__theme-menu-button:focus-visible {
   border-color: transparent;
-  border-block-end-color: var(--accent-color);
+  border-block-end-color: var(--theme-menu-color);
 }
 
 .header__description {
@@ -156,7 +158,7 @@ main {
 .section__title {
   font-size: var(--main-text-size);
   line-height: var(--main-text-line-height);
-  color: var(--accent-color);
+  color: var(--section-heading-color);
 }
 
 .card-title {
