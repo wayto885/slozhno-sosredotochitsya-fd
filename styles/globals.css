@@ -7,10 +7,11 @@
 }
 
 body {
-  min-inline-size: 375px;
-  max-inline-size: 1440px;
   margin: 0 auto;
   font-family: 'IBM Plex mono', monospace;
+  background-color: var(--background-color);
+  min-inline-size: 375px;
+  max-inline-size: 1440px;
 }
 
 h1,
@@ -35,8 +36,8 @@ picture {
 }
 
 button {
-  background-color: transparent;
   border: none;
+  background-color: transparent;
 }
 
 button,
@@ -45,4 +46,9 @@ a {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+}
+
+button:focus,
+a:focus {
+  outline: none;
 }

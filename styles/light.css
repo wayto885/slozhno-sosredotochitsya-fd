@@ -1,14 +1,14 @@
 :root.theme-light {
-  --background-color: #FFF1F7;
-  --heading-color: #FFC2E6;
-  --accent-color: #FF8DCB;
-  --transparent-accent-color: #32312D66;
+  --background-color: #fff1f7;
+  --heading-color: #ffc2e6;
+  --accent-color: #ff8dcb;
+  --transparent-accent-color: #32312d66;
   --theme-menu-color: #353430;
   --corner-decor-color: #353430;
   --section-heading-color: #353430;
   --main-text-color: #353430;
   --secondary-text-color: #353430;
-  --background-image: url('../images/cover-image-light.png');
+  --background-image: url("../images/cover-image-light.png");
 }
 
 .theme-light .header__rec {
@@ -17,15 +17,15 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --background-color: #FFF1F7;
-    --heading-color: #FFC2E6;
-    --accent-color: #FF8DCB;
-    --transparent-accent-color: #32312D66;
+    --background-color: #fff1f7;
+    --heading-color: #ffc2e6;
+    --accent-color: #ff8dcb;
+    --transparent-accent-color: #32312d66;
     --theme-menu-color: #353430;
     --corner-decor-color: #353430;
     --section-heading-color: #353430;
     --main-text-color: #353430;
     --secondary-text-color: #353430;
-    --background-image: url('../images/cover-image-light.png'); 
+    --background-image: url("../images/cover-image-light.png");
   }
 }
