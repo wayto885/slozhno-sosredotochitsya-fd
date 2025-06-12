@@ -1,7 +1,9 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
   background-color: var(--background-color);
+  background-image: var(--background-image);
+  background-size: 100% 100%;
+  background-position: center center;
+  background-attachment: fixed;
 }
 
 main {
@@ -30,22 +32,25 @@ main {
   border:1px solid var(--main-text-color);
 }
 
-.heading-decor {
+.heading-decor, .footer-decor {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: .83em;
   font-weight: bold;
   color: var(--heading-color);
+}
+
+.heading-decor {
   text-shadow: 4px 4px var(--accent-color);
+}
+
+.footer-decor {
+  text-shadow: 2px 2px var(--accent-color);
 }
 
 .header {
   padding-inline: 10px;
   padding-block: 10px;
   block-size: 100dvb;
-  background-image: var(--background-image);
-  background-size: 100% 100%;
-  background-position: center center;
-  background-attachment: fixed;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   position: relative;
@@ -82,7 +87,7 @@ main {
   align-items: center;
   column-gap: 10px;
   font-size: var(--main-text-size);
-  line-height: var(--main-text-line-height);;
+  line-height: var(--main-text-line-height);
   color: var(--accent-color);
   position: absolute;
   top: 10px;
@@ -218,17 +223,17 @@ main {
     right: 29px;
   }
 
-  .header__title {
+  .heading-decor, .footer-decor {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .header__description {
-    width: calc((100% - 20px) / 2);
+    inline-size: calc((100% - 20px) / 2);
     justify-self: end;
   }
 
   .section {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 2fr;
     column-gap: 20px;
   }
 
@@ -236,12 +241,12 @@ main {
     margin-block-end: 80px;
   }
 
-  .card, .card-title {
-    grid-column: 2 / span 2;
+  .card, .card-title, .cards-title {
+    grid-column: 2;
   }
 
   .section-attention-drainers .card {
-    grid-column: span 3;
+    grid-column: span 2;
   }
 
   .section-improve-concentration .section__title {
@@ -249,6 +254,7 @@ main {
   }
 
   .section-galery {
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: min-content 192px 230px 318px;
     row-gap: 20px;
   }
@@ -270,6 +276,7 @@ main {
 
 @media (width >= 1024px) {
   .header__theme-menu {
+    padding-inline-start: 20px;
     align-self: start;
     justify-self: center;
   }
@@ -277,6 +284,22 @@ main {
   .header__theme-menu-list {
     display: flex;
     column-gap: 10px;
+  }
+
+  .section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card, .card-title, .cards-title {
+    grid-column: 2 / span 2;
+  }
+
+  .section-attention-drainers .card:first-of-type {
+    grid-column: 1;
+  }
+
+  .section-attention-drainers .card {
+    grid-column: span 1;
   }
 
   .section-galery {
