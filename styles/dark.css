@@ -10,3 +10,7 @@
   --secondary-text-color: #000028;
   --background-image: url('../images/cover-image-dark.png');
 }
+
+.theme-dark .header__rec {
+  display: flex;
+}
